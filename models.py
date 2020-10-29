@@ -6,8 +6,8 @@ from tensorflow.keras import layers, Model, Sequential
 
 class ResBlock(layers.Layer):
     
-    def __init__(self):
-        self.conv1 = layers.Conv2D(256,kernel_size=4, strides=2,padding='same', use_bias=False)
+    def __init__(self, filters):
+        self.conv1 = layers.Conv2D(filters,kernel_size=4, strides=2,padding='same', use_bias=False)
         self.batchnorm = layers.BatchNormalisation()
         self.relu = layers.ReLU()
         
